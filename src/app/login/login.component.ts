@@ -11,6 +11,8 @@ import { LoginService } from './services/login.service';
 })
 export class LoginComponent implements OnInit {
 
+  hide = true;
+
   loginForm = new FormGroup({
     username: new FormControl(''),
     password: new FormControl('')
