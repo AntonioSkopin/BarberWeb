@@ -14,6 +14,7 @@ import { localStorageSync } from 'ngrx-store-localstorage';
 import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt';
 import { HttpErrorInterceptor } from './interceptors/http-error-interceptor.service';
 import { ToastrModule } from 'ngx-toastr';
+import { StartComponent } from './start/start.component';
 
 const reducers: ActionReducerMap<any> = {
   LoginState: loginReducer,
@@ -33,7 +34,8 @@ const metaReducers: Array<MetaReducer<any, any>> = [localStorageSyncReducer];
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    StartComponent
   ],
   imports: [
     StoreModule.forRoot(reducers, {

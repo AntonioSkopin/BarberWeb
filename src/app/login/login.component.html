@@ -1,5 +1,26 @@
-<form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)">
-    <input type="text" formControlName="username">
-    <input type="password" formControlName="password">
-    <input type="submit" value="Login">
-</form>
+<div class="login-container">
+    <div class="login-content">
+        <div class="login-form">
+            <form [formGroup]="loginForm">
+                <input type="text" formControlName="username" placeholder="Username">
+                <input type="password" formControlName="password" placeholder="Password">
+                <small><a href="#">Recover your password.</a></small>
+                <button (click)="login(loginForm.value)" class="login-btn" type="submit">Sign In</button>
+                <br>
+                <small class="lined-text"><span>or continue with</span></small>
+                <br>
+                <div class="social-media-icons">
+                    <div class="icon">
+                        <img src="../../assets/google.png" alt="">
+                    </div>
+                    <div class="icon">
+                        <img src="../../assets/apple.png" alt="">
+                    </div>
+                    <div class="icon">
+                        <img src="../../assets/facebook.png" alt="">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
